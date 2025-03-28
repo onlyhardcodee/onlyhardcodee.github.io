@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Расширение для защиты от мошенников</title>
+		<meta
+			name="description"
+			content="Расширение для браузера, которое ищет и предупреждает о потенциально опасных словах"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav>
+					<div class="logo">АНТИ СКАМ</div>
+					<ul class="nav-links">
+						<li><a href="#about">О расширении</a></li>
+						<li><a href="#features">Возможности</a></li>
+						<li><a href="#how-it-works">Как это работает</a></li>
+						<li><a href="#security">Безопасность</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="hero" class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1>Защита от негативного контента</h1>
+					<p class="lead">
+						Локальное расширение для браузера, которое автоматически определяет
+						и предупреждает вас о потенциально опасных или оскорбительных словах
+						на веб-страницах.
+					</p>
+				</div>
+				<div class="hero-image">
+					<div class="glow"></div>
+					<div class="card">
+						<div class="card-header">
+							<div class="dot"></div>
+							<div class="dot"></div>
+							<div class="dot"></div>
+						</div>
+						<div class="card-content">
+							<div class="alert">
+								<svg
+									class="alert-icon"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<circle cx="12" cy="12" r="10"></circle>
+									<line x1="12" y1="8" x2="12" y2="12"></line>
+									<line x1="12" y1="16" x2="12.01" y2="16"></line>
+								</svg>
+								<p>Обнаружены потенциально нежелательные слова</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="about">
+			<div class="container">
+				<h2>О расширении</h2>
+				<p>
+					АНТИ СКАМ – это простое, но незаменимое расширение для вашего
+					браузера, созданное для обеспечения более безопасного и комфортного
+					опыта в интернете. В отличие от сложных решений, наше расширение
+					следует философии "делать одну вещь, но делать её хорошо" – оно
+					фокусируется исключительно на обнаружении нежелательных слов и
+					выражений.
+				</p>
+				<p>
+					Благодаря работе полностью на стороне пользователя, расширение не
+					требует доступа к интернету и не отправляет никаких данных на сервер.
+					Ваша приватность остаётся полностью защищенной, поскольку весь анализ
+					происходит локально в вашем браузере.
+				</p>
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+							</svg>
+						</div>
+						<h3>Защита в реальном времени</h3>
+						<p>
+							Мгновенное сканирование и анализ веб-страниц при их загрузке без
+							задержек и влияния на производительность.
+						</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<circle cx="12" cy="12" r="3"></circle>
+								<path
+									d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+								></path>
+							</svg>
+						</div>
+						<h3>Настраиваемые фильтры</h3>
+						<p>
+							Возможность настроить категории слов и уровень чувствительности
+							для персонализации вашего опыта.
+						</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+								<path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+								<line x1="6" y1="1" x2="6" y2="4"></line>
+								<line x1="10" y1="1" x2="10" y2="4"></line>
+								<line x1="14" y1="1" x2="14" y2="4"></line>
+							</svg>
+						</div>
+						<h3>Полностью локальная работа</h3>
+						<p>
+							Вся обработка происходит локально в браузере, без отправки данных
+							на серверы, сохраняя вашу приватность.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="features" class="features">
+			<div class="container">
+				<h2>Возможности расширения</h2>
+				<div class="features-list">
+					<div class="feature-item">
+						<div class="feature-number">01</div>
+						<div class="feature-details">
+							<h3>Обнаружение негативного контента</h3>
+							<p>
+								Расширение автоматически сканирует текст на странице и выделяет
+								слова, которые могут быть оскорбительными, агрессивными или
+								мошенническими. Сложный алгоритм распознает даже скрытые угрозы
+								и потенциально опасные фразы.
+							</p>
+						</div>
+					</div>
+					<div class="feature-item">
+						<div class="feature-number">02</div>
+						<div class="feature-details">
+							<h3>Визуальные предупреждения</h3>
+							<p>
+								Интуитивные уведомления о потенциально нежелательном контенте с
+								возможностью быстрого просмотра выделенных слов. Предупреждения
+								не отвлекают от просмотра страницы, но всегда заметны.
+							</p>
+						</div>
+					</div>
+					<div class="feature-item">
+						<div class="feature-number">03</div>
+						<div class="feature-details">
+							<h3>Легкое управление</h3>
+							<p>
+								Интуитивно понятный интерфейс позволяет настраивать работу
+								расширения под свои предпочтения. Вы можете выбирать категории
+								слов для анализа и устанавливать уровень чувствительности.
+							</p>
+						</div>
+					</div>
+					<div class="feature-item">
+						<div class="feature-number">04</div>
+						<div class="feature-details">
+							<h3>Статистика обнаружений</h3>
+							<p>
+								Детальная статистика с информацией о том, сколько и каких
+								потенциально нежелательных слов было обнаружено, дает вам полное
+								представление о безопасности просматриваемых сайтов.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="how-it-works" class="how-it-works">
+			<div class="container">
+				<h2>Как это работает</h2>
+				<div class="steps">
+					<div class="step">
+						<div class="step-icon">1</div>
+						<div class="step-content">
+							<h3>Установка расширения</h3>
+							<p>
+								Скачайте и установите расширение локально в свой браузер через
+								режим разработчика.
+							</p>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-icon">2</div>
+						<div class="step-content">
+							<h3>Автоматическое сканирование</h3>
+							<p>
+								Расширение автоматически анализирует содержимое страниц при их
+								загрузке.
+							</p>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-icon">3</div>
+						<div class="step-content">
+							<h3>Обнаружение слов</h3>
+							<p>
+								Интеллектуальный алгоритм сравнивает слова на странице с
+								постоянно обновляемой базой данных нежелательных слов.
+							</p>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-icon">4</div>
+						<div class="step-content">
+							<h3>Уведомление пользователя</h3>
+							<p>
+								При обнаружении нежелательных слов расширение выдает
+								ненавязчивое, но заметное предупреждение.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="security" class="security">
+			<div class="container">
+				<h2>Защита от мошенничества</h2>
+				<p class="security-info">
+					АНТИ СКАМ — это не просто инструмент фильтрации, а комплексная система
+					защиты от онлайн-мошенничества. В эпоху, когда киберпреступность
+					становится все более изощренной, наше расширение выступает вашим
+					незаменимым цифровым защитником, помогая выявить мошеннические схемы
+					даже до того, как вы их заметите.
+				</p>
+
+				<div class="security-cards">
+					<div class="security-card">
+						<h3>Защита от фишинга</h3>
+						<p>
+							Расширение обнаруживает типичные фразы и шаблоны, используемые в
+							фишинговых атаках. Мошенники часто используют определенные
+							лингвистические приемы, чтобы вызвать доверие и заставить жертву
+							действовать быстро. АНТИ СКАМ распознает эти паттерны и
+							предупреждает вас о потенциальной опасности.
+						</p>
+					</div>
+					<div class="security-card">
+						<h3>Выявление социальной инженерии</h3>
+						<p>
+							Мы анализируем текст на наличие манипулятивных техник, которые
+							мошенники используют для получения личной информации или денег.
+							Наш алгоритм обучен распознавать психологические приемы, которые
+							заставляют людей принимать необдуманные решения под воздействием
+							эмоций.
+						</p>
+					</div>
+					<div class="security-card">
+						<h3>Распознавание мошеннических предложений</h3>
+						<p>
+							АНТИ СКАМ помогает выявить подозрительные предложения, обещающие
+							нереалистичные выгоды. Наше расширение выделяет ключевые фразы,
+							связанные с типичными мошенническими схемами, такими как пирамиды,
+							фальшивые лотереи или инвестиционные возможности, которые слишком
+							хороши, чтобы быть правдой.
+						</p>
+					</div>
+				</div>
+
+				<div class="security-notice">
+					<div class="notice-icon">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+							></path>
+							<line x1="12" y1="9" x2="12" y2="13"></line>
+							<line x1="12" y1="17" x2="12.01" y2="17"></line>
+						</svg>
+					</div>
+					<p>
+						<strong>Важно:</strong> Хотя наше расширение помогает обнаруживать
+						потенциально нежелательный контент, оно не гарантирует полную защиту
+						от всех видов мошенничества. Всегда проявляйте бдительность при
+						работе в интернете и доверяйте своей интуиции, если что-то кажется
+						подозрительным.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<div class="copyright">
+					<p>
+						&copy; 2025 АНТИ СКАМ. Курсовую работу сделала Маргарита Токарева.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Добавление требуемого скрипта Lovable -->
+		<script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
