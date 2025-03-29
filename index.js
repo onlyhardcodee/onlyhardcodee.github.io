@@ -1,31 +1,32 @@
-// Smooth scrolling for navigation links
+// Плавная прокрутка для навигационных ссылок
+// Ожидаем загрузки DOM
 document.addEventListener('DOMContentLoaded', function () {
-	// Get all links with hash
+	// Получаем все ссылки, содержащие хеш (#)
 	const links = document.querySelectorAll('a[href^="#"]')
 
-	// Add click event to each link
+	// Добавляем обработчик клика на каждую ссылку
 	for (const link of links) {
 		link.addEventListener('click', function (e) {
-			e.preventDefault()
+			e.preventDefault() // Предотвращаем стандартное поведение ссылки
 
-			// Get the target element
+			// Получаем идентификатор целевого элемента
 			const targetId = this.getAttribute('href')
 
-			// Handle the case where href="#" (no specific target)
+			// Если ссылка ведёт на "#" (без конкретной цели), ничего не делаем
 			if (targetId === '#') return
 
 			const targetElement = document.querySelector(targetId)
 
 			if (targetElement) {
-				// Calculate header height for offset
+				// Вычисляем высоту заголовка (header), чтобы учитывать его в прокрутке
 				const headerHeight = document.querySelector('header').offsetHeight
 
-				// Calculate the distance to scroll
+				// Рассчитываем положение прокрутки
 				const targetPosition =
 					targetElement.getBoundingClientRect().top + window.pageYOffset
 				const offsetPosition = targetPosition - headerHeight
 
-				// Smooth scroll to target
+				// Плавно прокручиваем страницу к нужному месту
 				window.scrollTo({
 					top: offsetPosition,
 					behavior: 'smooth',
@@ -34,25 +35,25 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-	// Add scroll event for active navigation highlighting
+	// Добавляем обработчик прокрутки для подсветки активного раздела
 	window.addEventListener('scroll', function () {
 		highlightActiveSection()
 	})
 
 	function highlightActiveSection() {
-		// Get all sections
+		// Получаем все секции с атрибутом id
 		const sections = document.querySelectorAll('section[id]')
 		const navLinks = document.querySelectorAll('.nav-links a')
 
-		// Get current scroll position
+		// Получаем текущую позицию прокрутки
 		const scrollPosition = window.scrollY
 
-		// Get header height for offset calculations
+		// Вычисляем высоту заголовка (header) для корректировки
 		const headerHeight = document.querySelector('header').offsetHeight
 
-		// Loop through sections to find the visible one
+		// Перебираем секции, чтобы определить, какая сейчас в области видимости
 		sections.forEach(section => {
-			const sectionTop = section.offsetTop - headerHeight - 100 // extra offset for better UX
+			const sectionTop = section.offsetTop - headerHeight - 100 // Дополнительный отступ для UX
 			const sectionHeight = section.offsetHeight
 			const sectionId = section.getAttribute('id')
 
@@ -60,12 +61,12 @@ document.addEventListener('DOMContentLoaded', function () {
 				scrollPosition >= sectionTop &&
 				scrollPosition < sectionTop + sectionHeight
 			) {
-				// Remove active class from all links
+				// Убираем активный класс у всех ссылок
 				navLinks.forEach(link => {
 					link.classList.remove('active')
 				})
 
-				// Add active class to corresponding navigation link
+				// Добавляем активный класс к соответствующей ссылке в навигации
 				const activeLink = document.querySelector(
 					`.nav-links a[href="#${sectionId}"]`
 				)
@@ -76,10 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-	// Call once on page load
+	// Вызываем один раз при загрузке страницы
 	highlightActiveSection()
 
-	// Add some subtle parallax effect to the hero section
+	// Добавляем небольшой параллакс-эффект для главного экрана (hero section)
 	const heroSection = document.querySelector('.hero')
 
 	window.addEventListener('scroll', function () {
@@ -89,18 +90,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	})
 
-	// Add animation to feature cards when they come into view
+	// Анимация появления карточек с функциями при их появлении в области видимости
 	const observerOptions = {
-		root: null,
-		rootMargin: '0px',
-		threshold: 0.1,
+		root: null, // Отслеживаем относительно всего viewport'а
+		rootMargin: '0px', // Без дополнительных отступов
+		threshold: 0.1, // Элемент должен быть виден хотя бы на 10%
 	}
 
 	const observerCallback = (entries, observer) => {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
 				entry.target.classList.add('fadeIn')
-				// Stop observing once animation is applied
+				// Перестаём наблюдать за элементом после анимации
 				observer.unobserve(entry.target)
 			}
 		})
@@ -108,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const observer = new IntersectionObserver(observerCallback, observerOptions)
 
-	// Observe all feature cards, steps, and other elements that should animate
+	// Наблюдаем за всеми карточками, шагами и элементами безопасности
 	const animatedElements = document.querySelectorAll(
 		'.feature-card, .step, .security-card'
 	)
@@ -119,13 +120,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		observer.observe(el)
 	})
 
-	// Apply fadeIn class to add animation
+	// Добавляем класс fadeIn, чтобы запустить анимацию
 	document.addEventListener('DOMContentLoaded', function () {
 		document.body.classList.add('loaded')
 	})
 })
 
-// Add fadeIn animation when elements come into view
+// Добавляем fadeIn анимацию при появлении элементов в области видимости
+// (Дублирующаяся логика для надёжности)
 document.addEventListener('DOMContentLoaded', function () {
 	const fadeElements = document.querySelectorAll(
 		'.feature-card, .step, .security-card'
@@ -151,7 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 })
 
-// Добавляем класс active для активного пункта меню
+// Добавляем класс active для активного пункта меню при клике
+// (для визуального выделения активного раздела)
 document.addEventListener('DOMContentLoaded', function () {
 	const navLinks = document.querySelectorAll('.nav-links a')
 
@@ -162,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	})
 
-	// Активируем первый пункт меню по умолчанию
+	// По умолчанию активируем первый пункт меню
 	if (navLinks.length > 0) {
 		navLinks[0].classList.add('active')
 	}

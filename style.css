@@ -69,6 +69,7 @@ nav {
 .logo {
 	font-size: 1.8rem;
 	font-weight: 700;
+	width: auto;
 	background: var(--gradient-primary);
 	-webkit-background-clip: text;
 	background-clip: text;
